@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration - StudentHub | CHARUSAT FTE</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <img src="../assets/images/logo.svg" alt="StudentHub Logo" width="160" height="40">
+      </a>
+      <nav role="navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="student_dashboard.html">🎓 Dashboard</a></li>
+          <li><a href="admin_dashboard.html" style="color:#d97706; font-weight:700;">⚡ Admin</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle theme">🌙</button>
+        <a href="login.html" class="btn btn-sm btn-secondary">Login</a>
+        <a href="register.html" class="btn btn-sm btn-primary">Register</a>
+        <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list">
+        <li><a href="index.html">Home</a></li>
+        <li class="current" aria-current="page">Register</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main id="main-content" role="main" class="container">
+    <!-- Wireframe 5: Register layout -->
+    <div class="auth-container">
+      <div class="auth-header">
+        <span class="badge badge-primary" style="margin-bottom:8px;">CHARUSAT FTE Portal</span>
+        <h1>Student Registration</h1>
+        <p>Create your student account to register for events and workshops.</p>
+      </div>
+
+      <!-- Wireframe 5: Name, email, mobile, password, confirm, Course, year, gender, terms checkbox, Register button -->
+      <form id="registrationForm" novalidate onsubmit="return false;">
+        <!-- Name -->
+        <div class="form-group">
+          <label for="full_name" class="form-label">Full Name <span class="required">*</span></label>
+          <input type="text" id="full_name" name="full_name" class="form-control" placeholder="e.g., Aarav Sharma" required>
+          <div class="error-msg" id="fullNameError"></div>
+        </div>
+
+        <!-- Email & Mobile -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email" class="form-label">College Email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="e.g., student@charusat.edu.in" required>
+            <div class="error-msg" id="emailError"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="mobile" class="form-label">Mobile Number <span class="required">*</span></label>
+            <input type="tel" id="mobile" name="mobile" class="form-control" placeholder="10-digit mobile number" maxlength="10" required>
+            <div class="error-msg" id="mobileError"></div>
+          </div>
+        </div>
+
+        <!-- Course & Year -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="course" class="form-label">Course / Department <span class="required">*</span></label>
+            <select id="course" name="course" class="form-control" required>
+              <option value="">-- Select Course --</option>
+              <option value="B.Tech IT">B.Tech Information Technology</option>
+              <option value="B.Tech CE">B.Tech Computer Engineering</option>
+              <option value="B.Tech CSE">B.Tech Computer Science &amp; Eng.</option>
+              <option value="B.Tech EC">B.Tech Electronics &amp; Comm.</option>
+              <option value="BCA">BCA</option>
+              <option value="MCA">MCA</option>
+            </select>
+            <div class="error-msg" id="courseError"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="year_of_study" class="form-label">Year of Study <span class="required">*</span></label>
+            <select id="year_of_study" name="year_of_study" class="form-control" required>
+              <option value="">-- Select Year --</option>
+              <option value="1st Year">1st Year</option>
+              <option value="2nd Year">2nd Year</option>
+              <option value="3rd Year">3rd Year</option>
+              <option value="4th Year">4th Year</option>
+            </select>
+            <div class="error-msg" id="year_of_studyError"></div>
+          </div>
+        </div>
+
+        <!-- Gender -->
+        <div class="form-group">
+          <label class="form-label">Gender <span class="required">*</span></label>
+          <div style="display:flex; gap:24px; padding-top:4px;">
+            <label class="checkbox-label">
+              <input type="radio" name="gender" value="Male" checked> Male
+            </label>
+            <label class="checkbox-label">
+              <input type="radio" name="gender" value="Female"> Female
+            </label>
+            <label class="checkbox-label">
+              <input type="radio" name="gender" value="Other"> Other
+            </label>
+          </div>
+          <div class="error-msg" id="genderError"></div>
+        </div>
+
+        <!-- Password & Confirm Password -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="password" class="form-label">Password <span class="required">*</span></label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Min 8 chars, 1 uppercase, 1 symbol" required>
+            <!-- Practical 5: Password Strength Meter -->
+            <div class="password-meter-wrap">
+              <div class="meter-bar"><div class="meter-fill" id="passwordMeterFill"></div></div>
+              <div class="meter-label" id="passwordMeterLabel">Strength: None</div>
+            </div>
+            <div class="error-msg" id="passwordError"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="confirm_password" class="form-label">Confirm Password <span class="required">*</span></label>
+            <input type="password" id="confirm_password" name="confirm_password" class="form-control" placeholder="Re-enter password" required>
+            <div class="error-msg" id="confirmPasswordError"></div>
+          </div>
+        </div>
+
+        <!-- Practical 5: HTML5 Canvas CAPTCHA -->
+        <div class="form-group" style="padding:16px; background:var(--bg-alt); border-radius:var(--radius-sm); margin-bottom:20px;">
+          <label for="captcha" class="form-label">Security Verification (Canvas CAPTCHA) <span class="required">*</span></label>
+          <div class="captcha-box">
+            <canvas id="captchaCanvas" width="170" height="46" class="captcha-canvas" aria-label="Visual CAPTCHA"></canvas>
+            <button type="button" class="captcha-refresh-btn" id="refreshCaptchaBtn" title="Get new CAPTCHA">🔄 Refresh</button>
+          </div>
+          <input type="text" id="captcha" name="captcha" class="form-control" placeholder="Type the characters shown above" required autocomplete="off">
+          <div class="error-msg" id="captchaError"></div>
+        </div>
+
+        <!-- Terms checkbox -->
+        <div class="form-group">
+          <label class="checkbox-label" for="terms">
+            <input type="checkbox" id="terms" name="terms" required>
+            <span>I agree to the terms and conditions and the CHARUSAT FTE code of conduct.</span>
+          </label>
+          <div class="error-msg" id="termsError"></div>
+        </div>
+
+        <!-- Wireframe 5: Register button -->
+        <div style="margin-top:28px;">
+          <button type="submit" class="btn btn-primary btn-lg btn-block" id="registerSubmitBtn">Register Account &rarr;</button>
+        </div>
+
+        <p style="text-align:center; margin-top:20px; font-size:0.95rem; color:var(--text-muted);">
+          Already have an account? <a href="login.html" style="font-weight:700;">Login here</a>
+        </p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-bottom">
+      <p>&copy; 2026 CHARUSAT - Faculty of Technology and Engineering (FTE). ITUE203 Web Development Frameworks.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/validation.js"></script>
+</body>
+</html>

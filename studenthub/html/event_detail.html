@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Details - StudentHub | CHARUSAT FTE</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <img src="../assets/images/logo.svg" alt="StudentHub Logo" width="160" height="40">
+      </a>
+      <nav role="navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html" class="active">Events</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="student_dashboard.html">🎓 Dashboard</a></li>
+          <li><a href="admin_dashboard.html" style="color:#d97706; font-weight:700;">⚡ Admin</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle theme">🌙</button>
+        <a href="login.html" class="btn btn-sm btn-secondary">Login</a>
+        <a href="register.html" class="btn btn-sm btn-primary">Register</a>
+        <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li class="current" aria-current="page">TechFest Spoural 2026</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main id="main-content" role="main" class="container" style="padding-top:20px;">
+    <!-- Wireframe 4: Event details layout -->
+    <div class="event-detail-wrapper">
+      <article class="event-detail-main">
+        <!-- Wireframe 4: Poster image + title, date, venue, category -->
+        <div class="event-detail-poster">
+          <img src="../assets/images/event_techfest.svg" alt="TechFest Spoural 2026" width="800" height="420">
+        </div>
+        <div class="event-detail-body">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+            <span class="badge badge-primary">Technical</span>
+            <span class="badge badge-success">Status: Upcoming</span>
+          </div>
+
+          <h1 style="font-size:2.2rem; font-weight:800; margin-bottom:18px; line-height:1.2;">TechFest Spoural 2026</h1>
+
+          <div style="display:flex; flex-wrap:wrap; gap:20px; padding:16px; background:var(--bg-alt); border-radius:var(--radius-sm); margin-bottom:28px;">
+            <div><strong>📅 Date:</strong> Sunday, November 15, 2026</div>
+            <div><strong>⏰ Time:</strong> 09:00 AM</div>
+            <div><strong>📍 Venue:</strong> FTE Auditorium &amp; Central Lawns</div>
+          </div>
+
+          <!-- Wireframe 4: Full description text -->
+          <h3 style="font-size:1.35rem; margin-bottom:12px;">Full Description</h3>
+          <div style="line-height:1.8; color:var(--text-main); font-size:1.05rem;">
+            <p>
+              TechFest Spoural 2026 is the premier annual national-level technical festival of Charotar University of Science and Technology (CHARUSAT), organized by the Faculty of Technology and Engineering (FTE).
+            </p>
+            <p style="margin-top:12px;">
+              Featuring an exhilarating 24-hour hackathon, competitive coding sprints, autonomous robotics combat, drone racing, web UI design showcases, and expert panels led by tech leaders. Top winning teams receive trophies, certificates of merit, and cash prizes worth over ₹1,50,000.
+            </p>
+          </div>
+
+          <div style="margin-top:36px; padding:24px; background:var(--primary-light); border-radius:var(--radius-sm); border-left:4px solid var(--primary);">
+            <h4 style="color:var(--primary-dark); margin-bottom:6px;">Participation Guidelines</h4>
+            <ul style="padding-left:20px; color:var(--text-main); font-size:0.95rem; line-height:1.7;">
+              <li>Open to all registered undergraduate and postgraduate engineering students.</li>
+              <li>Official CHARUSAT student identity cards must be presented during registration verification.</li>
+              <li>Certificates of participation will be awarded to all attendees.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <aside class="event-detail-sidebar">
+        <div class="info-card">
+          <h3 style="font-size:1.25rem; font-weight:700; margin-bottom:14px;">Event Details</h3>
+          <ul class="info-list">
+            <li><span class="label">Total Capacity:</span> <span class="val">250 Students</span></li>
+            <li><span class="label">Confirmed Seats:</span> <span class="val">48</span></li>
+            <li><span class="label">Seats Remaining:</span> <span class="val" style="color:var(--primary);">202</span></li>
+            <li><span class="label">Registration Fee:</span> <span class="val" style="color:var(--success);">Free</span></li>
+            <li><span class="label">Eligibility:</span> <span class="val">All FTE Departments</span></li>
+          </ul>
+
+          <!-- Wireframe 4: Register button -->
+          <div style="margin-top:20px;">
+            <a href="login.html" class="btn btn-primary btn-lg btn-block" onclick="alert('Registration button clicked! In full-stack mode, this registers your student account instantaneously.'); return true;">
+              Register for Event &rarr;
+            </a>
+            <small style="display:block; text-align:center; color:var(--text-muted); margin-top:8px;">Student login required</small>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h4 style="font-size:1.1rem; margin-bottom:10px;">Have Questions?</h4>
+          <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:14px;">
+            Reach out directly to the event faculty coordinators.
+          </p>
+          <a href="contact.html" class="btn btn-sm btn-outline btn-block">Contact Coordinator</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-bottom">
+      <p>&copy; 2026 CHARUSAT - Faculty of Technology and Engineering (FTE). ITUE203 Web Development Frameworks.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Feedback - StudentHub | CHARUSAT FTE</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <img src="../assets/images/logo.svg" alt="StudentHub Logo" width="160" height="40">
+      </a>
+      <nav role="navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="student_dashboard.html">🎓 Dashboard</a></li>
+          <li><a href="admin_dashboard.html" style="color:#d97706; font-weight:700;">⚡ Admin</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle theme">🌙</button>
+        <a href="login.html" class="btn btn-sm btn-secondary">Login</a>
+        <a href="register.html" class="btn btn-sm btn-primary">Register</a>
+        <button type="button" class="hamburger-btn" id="hamburgerBtn">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list">
+        <li><a href="index.html">Home</a></li>
+        <li class="current" aria-current="page">Contact / Feedback</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main id="main-content" role="main" class="container">
+    <!-- Wireframe 9: Contact / feedback layout -->
+    <div class="contact-layout">
+      <!-- Wireframe 9: College address, phone, email -->
+      <aside class="contact-info-card">
+        <span class="badge badge-primary" style="margin-bottom:12px;">Get in Touch</span>
+        <h2 style="font-size:1.8rem; font-weight:800; margin-bottom:12px;">Faculty of Technology &amp; Engineering</h2>
+        <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:28px;">
+          Have questions regarding events, lab practicals, or the student portal? Contact us anytime.
+        </p>
+
+        <div class="contact-meta-item">
+          <div class="contact-meta-icon">📍</div>
+          <div>
+            <h4 style="font-size:1.05rem; margin-bottom:4px;">Campus Address</h4>
+            <p style="color:var(--text-muted); font-size:0.9rem;">
+              Faculty of Technology and Engineering (FTE)<br>
+              Charotar University of Science and Technology (CHARUSAT)<br>
+              Changa, Dist. Anand, Gujarat - 388421
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-meta-item">
+          <div class="contact-meta-icon">📞</div>
+          <div>
+            <h4 style="font-size:1.05rem; margin-bottom:4px;">Phone</h4>
+            <p style="color:var(--text-muted); font-size:0.9rem;">+91 2697 265011 / 265021</p>
+          </div>
+        </div>
+
+        <div class="contact-meta-item">
+          <div class="contact-meta-icon">✉️</div>
+          <div>
+            <h4 style="font-size:1.05rem; margin-bottom:4px;">Email</h4>
+            <p style="color:var(--text-muted); font-size:0.9rem;">info.fte@charusat.ac.in</p>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Wireframe 9: Name, email, subject fields, Message textarea, Send message button -->
+      <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:40px; box-shadow:var(--shadow-sm);">
+        <h2 style="font-size:1.8rem; font-weight:800; margin-bottom:8px;">Send Message / Feedback</h2>
+        <p style="color:var(--text-muted); margin-bottom:28px;">Submit your comments or queries to campus administrators.</p>
+
+        <form onsubmit="alert('Thank you! Your feedback message has been received.'); return false;">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name" class="form-label">Your Name <span class="required">*</span></label>
+              <input type="text" id="name" name="name" class="form-control" placeholder="Aarav Sharma" required>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Your Email <span class="required">*</span></label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="aarav@charusat.edu.in" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject" class="form-label">Subject <span class="required">*</span></label>
+            <input type="text" id="subject" name="subject" class="form-control" placeholder="e.g., Query regarding Hackathon team size" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message" class="form-label">Message <span class="required">*</span></label>
+            <textarea id="message" name="message" class="form-control" rows="6" placeholder="Write your message here..." required></textarea>
+          </div>
+
+          <div style="margin-top:24px;">
+            <button type="submit" class="btn btn-primary btn-lg">Send Message &rarr;</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-bottom">
+      <p>&copy; 2026 CHARUSAT - Faculty of Technology and Engineering (FTE). ITUE203 Web Development Frameworks.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

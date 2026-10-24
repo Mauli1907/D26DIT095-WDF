@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - StudentHub | CHARUSAT FTE</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <img src="../assets/images/logo.svg" alt="StudentHub Logo" width="160" height="40">
+      </a>
+      <nav role="navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="faq.html" class="active">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="student_dashboard.html">🎓 Dashboard</a></li>
+          <li><a href="admin_dashboard.html" style="color:#d97706; font-weight:700;">⚡ Admin</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle theme">🌙</button>
+        <a href="login.html" class="btn btn-sm btn-secondary">Login</a>
+        <a href="register.html" class="btn btn-sm btn-primary">Register</a>
+        <button type="button" class="hamburger-btn" id="hamburgerBtn">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list">
+        <li><a href="index.html">Home</a></li>
+        <li class="current" aria-current="page">FAQ</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main id="main-content" role="main" class="container" style="max-width:880px; padding-top:30px; margin-bottom:70px;">
+    <div class="section-header" style="text-align:left;">
+      <span class="badge badge-primary">Practical 4: Collapsible Accordion</span>
+      <h1 style="font-size:2.4rem; font-weight:800; margin-top:8px; margin-bottom:8px;">Frequently Asked Questions</h1>
+      <p style="color:var(--text-muted); font-size:1.05rem;">
+        Find fast answers to common questions about StudentHub portal features, registrations, account security, and lab practicals.
+      </p>
+    </div>
+
+    <!-- Live FAQ Filter -->
+    <div style="margin-bottom:28px;">
+      <input type="text" id="faqSearchInput" class="filter-input" placeholder="🔍 Type to search FAQ questions or topics in real time..." style="width:100%; font-size:1.05rem; padding:14px 18px;">
+    </div>
+
+    <!-- Practical 4: FAQ Accordion List -->
+    <div class="faq-list">
+      <div class="faq-item active">
+        <button type="button" class="faq-question">
+          <span><span class="badge badge-neutral" style="margin-right:8px;">General</span>What is StudentHub?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>StudentHub is the unified digital portal for students of Charotar University of Science and Technology (CHARUSAT), FTE. It streamlines event registrations, notices, profiles, and campus updates.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="faq-question">
+          <span><span class="badge badge-neutral" style="margin-right:8px;">Account</span>How do I register for an account?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Click on the 'Register' link in the top menu. Enter your name, official college email, mobile number, department/course, solve the Canvas CAPTCHA, and submit.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="faq-question">
+          <span><span class="badge badge-neutral" style="margin-right:8px;">Events</span>How do I register for campus events?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Browse upcoming workshops or hackathons on the Events page, click on any event card, and click 'Register for Event'. Your seat is confirmed instantly.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="faq-question">
+          <span><span class="badge badge-neutral" style="margin-right:8px;">Security</span>How are passwords secured?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>All passwords are encrypted using PHP's password_hash() with BCrypt (cost factor 10) before database storage. Plaintext passwords are never saved.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="faq-question">
+          <span><span class="badge badge-neutral" style="margin-right:8px;">UI/UX</span>How do I switch to Dark Mode?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Click the sun/moon button in the top navigation bar. Your theme choice is stored in your browser's localStorage and retained across visits.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-bottom">
+      <p>&copy; 2026 CHARUSAT - Faculty of Technology and Engineering (FTE). ITUE203 Web Development Frameworks.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+    document.getElementById('faqSearchInput').addEventListener('input', function(e) {
+      const q = e.target.value.toLowerCase().trim();
+      document.querySelectorAll('.faq-item').forEach(function(item) {
+        item.style.display = item.textContent.toLowerCase().includes(q) ? '' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>

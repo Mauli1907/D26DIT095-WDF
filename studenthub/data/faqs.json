@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "question": "What is StudentHub?",
+    "category": "General",
+    "answer": "StudentHub is the unified digital portal for students of Charotar University of Science and Technology (CHARUSAT), FTE. It streamlines event registrations, notices, profiles, and campus updates."
+  },
+  {
+    "id": 2,
+    "question": "How do I register for an account?",
+    "category": "Account",
+    "answer": "Click on the 'Register' link in the navigation menu. Fill in your full name, official college email, mobile number, course, year of study, solve the Canvas CAPTCHA, and submit."
+  },
+  {
+    "id": 3,
+    "question": "Who can access the Admin Dashboard?",
+    "category": "Security",
+    "answer": "Only authorized faculty and administrative staff with verified 'admin' role credentials can access the Admin Dashboard. Unauthorized attempts are automatically blocked and logged."
+  },
+  {
+    "id": 4,
+    "question": "How do I register for upcoming events?",
+    "category": "Events",
+    "answer": "Navigate to the 'Events' page, search or filter by category, open the event details page, and click 'Register for Event'. If logged in, registration happens instantly without page reload."
+  },
+  {
+    "id": 5,
+    "question": "Can I cancel my event registration?",
+    "category": "Events",
+    "answer": "Yes. From your Student Dashboard, view your registered events list and click 'Cancel Registration' to free up the seat for other students."
+  },
+  {
+    "id": 6,
+    "question": "How does the 'Remember Me' feature work?",
+    "category": "Security",
+    "answer": "When checked during login, a secure cryptographically random token is generated, hashed, and stored in the database while an HTTP-only secure cookie is placed in your browser."
+  },
+  {
+    "id": 7,
+    "question": "What happens when my session times out?",
+    "category": "Security",
+    "answer": "For security compliance, inactive sessions expire after 15 minutes. You will be redirected to the login page with a session timeout notification."
+  },
+  {
+    "id": 8,
+    "question": "Where can I view the practical laboratory guides?",
+    "category": "Academic",
+    "answer": "Click on 'Practicals Lab Hub' in the header navigation or footer to access live interactive demos and explanations for Practicals 2 through 15."
+  },
+  {
+    "id": 9,
+    "question": "How do I switch between Light and Dark themes?",
+    "category": "UI/UX",
+    "answer": "Click the sun/moon toggle button in the top navigation bar. Your theme preference is saved in your browser's localStorage and retained across visits."
+  },
+  {
+    "id": 10,
+    "question": "How is event poster upload validated?",
+    "category": "Events",
+    "answer": "The server checks both file extension and MIME type (JPEG, PNG, WebP) and restricts file size to 2MB, automatically sanitizing and renaming files to avoid conflicts."
+  },
+  {
+    "id": 11,
+    "question": "Can students update their profile details?",
+    "category": "Account",
+    "answer": "Yes, navigate to 'Profile' from your dashboard menu to update your contact mobile, semester year, biographical information, and interests."
+  },
+  {
+    "id": 12,
+    "question": "How does the AJAX Fetch CRUD work without page reload?",
+    "category": "Technical",
+    "answer": "Practical 13 uses the JavaScript Fetch API to interact asynchronously with PHP JSON REST endpoints (`api/events.php`), mutating the DOM dynamically without page refreshes."
+  },
+  {
+    "id": 13,
+    "question": "Where are contact and feedback messages stored?",
+    "category": "General",
+    "answer": "Under Practical 7, submissions are validated server-side and recorded to both `submissions.csv` and `submissions.json` with file locking, as well as the database."
+  },
+  {
+    "id": 14,
+    "question": "Are passwords securely stored in StudentHub?",
+    "category": "Security",
+    "answer": "Yes! All passwords are hashed using PHP's industry-standard `password_hash()` with BCrypt (Cost 10) before being stored in the database. Plain text is never persisted."
+  },
+  {
+    "id": 15,
+    "question": "What should I do if I encounter an error or bug?",
+    "category": "Support",
+    "answer": "Use the Contact / Feedback page to submit a report directly to the IT administrator with details of the page and error encountered."
+  }
+]

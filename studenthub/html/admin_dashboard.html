@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - StudentHub | CHARUSAT FTE</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <img src="../assets/images/logo.svg" alt="StudentHub Logo" width="160" height="40">
+      </a>
+      <nav role="navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="admin_dashboard.html" class="active" style="color:#d97706; font-weight:700;">⚡ Admin Panel</a></li>
+          <li><a href="student_dashboard.html">🎓 Student Portal</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle theme">🌙</button>
+        <span style="font-weight:600; font-size:0.9rem;">Administrator</span>
+        <a href="login.html" class="btn btn-sm btn-outline" style="color:var(--danger); border-color:var(--danger);">Logout</a>
+        <button type="button" class="hamburger-btn" id="hamburgerBtn">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list">
+        <li><a href="index.html">Home</a></li>
+        <li class="current" aria-current="page">Admin Dashboard</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main id="main-content" role="main" class="container">
+    <!-- Wireframe 10: Admin dashboard layout -->
+    <div class="dashboard-grid">
+      <!-- Wireframe 10 Sidebar: Students, Events, Notices, Audit logs -->
+      <aside class="dashboard-sidebar">
+        <div class="user-profile-badge">
+          <div style="font-size:2.8rem; line-height:1; margin-bottom:8px;">🛡️</div>
+          <h3 style="font-size:1.15rem; margin-bottom:2px;">Admin Console</h3>
+          <p style="font-size:0.85rem; color:var(--text-muted);">admin@charusat.edu.in</p>
+          <span class="badge badge-warning" style="margin-top:6px;">Administrator</span>
+        </div>
+
+        <nav aria-label="Admin sidebar navigation">
+          <ul class="side-menu">
+            <li><a href="admin_dashboard.html" class="active">📊 Overview</a></li>
+            <li><a href="#students-section">👥 Students List</a></li>
+            <li><a href="#events-section">📅 Events Management</a></li>
+            <li><a href="#notices-section">📢 Campus Notices</a></li>
+            <li><a href="#audit-section">📜 Audit Logs</a></li>
+            <li><a href="login.html" style="color:var(--danger);">🚪 Logout</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main Column -->
+      <section>
+        <!-- Wireframe 10 Top Cards: Students: 240, Events: 18, New: 5 -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon" style="background:#e0e7ff; color:#4338ca;">👨‍🎓</div>
+            <div>
+              <div class="stat-val">240</div>
+              <div class="stat-label">Total Students</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon" style="background:#fef3c7; color:#92400e;">📅</div>
+            <div>
+              <div class="stat-val">18</div>
+              <div class="stat-label">Active Events</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon" style="background:#d1fae5; color:#065f46;">⚡</div>
+            <div>
+              <div class="stat-val">5</div>
+              <div class="stat-label">New Registrations Today</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wireframe 10: Table: recent registrations / activity + Manage buttons: add / edit / delete -->
+        <div class="table-card">
+          <div class="table-header">
+            <div>
+              <h3 style="font-size:1.25rem; font-weight:700;">Recent Registrations &amp; Activity</h3>
+              <p style="font-size:0.875rem; color:var(--text-muted);">Live feed of student participations.</p>
+            </div>
+            <!-- Wireframe 10 Manage buttons: add / edit / delete -->
+            <div style="display:flex; gap:8px;">
+              <button class="btn btn-sm btn-primary" onclick="alert('Add Event modal: Opens creation dialog.');">+ Add</button>
+              <button class="btn btn-sm btn-secondary" onclick="alert('Edit mode activated.');">Edit</button>
+              <button class="btn btn-sm btn-danger" onclick="confirm('Delete selected item?');">Delete</button>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="data-table" aria-label="Recent registrations activity">
+              <thead>
+                <tr>
+                  <th>Reg ID</th>
+                  <th>Student Name</th>
+                  <th>Event Title</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>#501</strong></td>
+                  <td>
+                    <div style="font-weight:700;">Aarav Sharma</div>
+                    <small style="color:var(--text-muted);">aarav@charusat.edu.in</small>
+                  </td>
+                  <td>TechFest Spoural 2026</td>
+                  <td>Oct 22, 10:15 AM</td>
+                  <td><span class="badge badge-success">Registered</span></td>
+                  <td>
+                    <button class="btn btn-sm btn-outline">Edit</button>
+                    <button class="btn btn-sm btn-danger" onclick="confirm('Delete record?');">Delete</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><strong>#502</strong></td>
+                  <td>
+                    <div style="font-weight:700;">Diya Patel</div>
+                    <small style="color:var(--text-muted);">diya@charusat.edu.in</small>
+                  </td>
+                  <td>AI &amp; Deep Learning Seminar</td>
+                  <td>Oct 22, 11:20 AM</td>
+                  <td><span class="badge badge-success">Registered</span></td>
+                  <td>
+                    <button class="btn btn-sm btn-outline">Edit</button>
+                    <button class="btn btn-sm btn-danger" onclick="confirm('Delete record?');">Delete</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><strong>#503</strong></td>
+                  <td>
+                    <div style="font-weight:700;">Rohan Mehta</div>
+                    <small style="color:var(--text-muted);">rohan@charusat.edu.in</small>
+                  </td>
+                  <td>Campus Sports Meet - Aaveg</td>
+                  <td>Oct 22, 12:45 PM</td>
+                  <td><span class="badge badge-primary">Attended</span></td>
+                  <td>
+                    <button class="btn btn-sm btn-outline">Edit</button>
+                    <button class="btn btn-sm btn-danger" onclick="confirm('Delete record?');">Delete</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Audit Log Preview -->
+        <div class="table-card" id="audit-section">
+          <div class="table-header">
+            <h3 style="font-size:1.25rem; font-weight:700;">📜 Security Audit Trail</h3>
+            <span class="badge badge-neutral">Logged Events</span>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table" aria-label="Audit Log">
+              <thead>
+                <tr>
+                  <th>Timestamp</th>
+                  <th>Action</th>
+                  <th>Role</th>
+                  <th>Details</th>
+                  <th>IP Address</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2026-10-22 14:00</td>
+                  <td><span class="badge badge-primary"><code>EVENT_CREATED</code></span></td>
+                  <td>admin</td>
+                  <td>Created event: Web Dev Frameworks Hackathon</td>
+                  <td><code>127.0.0.1</code></td>
+                </tr>
+                <tr>
+                  <td>2026-10-22 11:20</td>
+                  <td><span class="badge badge-primary"><code>EVENT_REGISTRATION</code></span></td>
+                  <td>student</td>
+                  <td>Diya Patel registered for AI Seminar</td>
+                  <td><code>127.0.0.1</code></td>
+                </tr>
+                <tr>
+                  <td>2026-10-22 09:05</td>
+                  <td><span class="badge badge-primary"><code>USER_LOGIN</code></span></td>
+                  <td>admin</td>
+                  <td>Administrator authenticated successfully</td>
+                  <td><code>127.0.0.1</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-bottom">
+      <p>&copy; 2026 CHARUSAT - Faculty of Technology and Engineering (FTE). ITUE203 Web Development Frameworks.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

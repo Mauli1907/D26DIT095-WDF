@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Profile - StudentHub | CHARUSAT FTE</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <img src="../assets/images/logo.svg" alt="StudentHub Logo" width="160" height="40">
+      </a>
+      <nav role="navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="student_dashboard.html">🎓 Dashboard</a></li>
+          <li><a href="profile.html" class="active">👤 Profile</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle theme">🌙</button>
+        <span style="font-weight:600; font-size:0.9rem;">Aarav Sharma</span>
+        <a href="login.html" class="btn btn-sm btn-outline" style="color:var(--danger); border-color:var(--danger);">Logout</a>
+        <button type="button" class="hamburger-btn" id="hamburgerBtn">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="student_dashboard.html">Dashboard</a></li>
+        <li class="current" aria-current="page">Profile</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main id="main-content" role="main" class="container">
+    <!-- Wireframe 8: Profile Card -->
+    <div class="profile-card">
+      <div style="margin-bottom:24px;">
+        <h1 style="font-size:2rem; font-weight:800; margin-bottom:6px;">Student Profile</h1>
+        <p style="color:var(--text-muted);">Manage your personal details and academic department information.</p>
+      </div>
+
+      <form onsubmit="alert('Profile changes saved successfully!'); return false;">
+        <!-- Wireframe 8: Photo + name, email, mobile, course, year fields -->
+        <div class="profile-header-group">
+          <div>
+            <img src="../assets/images/default_avatar.svg" alt="Student Photo" class="profile-avatar-lg" style="width:110px; height:110px;">
+          </div>
+          <div>
+            <h2 style="font-size:1.4rem; margin-bottom:4px;">Aarav Sharma</h2>
+            <p style="color:var(--text-muted); font-size:0.95rem;">23IT001 &bull; B.Tech Information Technology</p>
+            <span class="badge badge-success" style="margin-top:6px;">Enrolled Student</span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="full_name" class="form-label">Full Name <span class="required">*</span></label>
+            <input type="text" id="full_name" name="full_name" class="form-control" value="Aarav Sharma" required>
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address (Read-only)</label>
+            <input type="email" id="email" class="form-control" value="aarav.sharma@charusat.edu.in" disabled style="background:var(--bg-alt); cursor:not-allowed;">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="mobile" class="form-label">Mobile Number <span class="required">*</span></label>
+            <input type="tel" id="mobile" name="mobile" class="form-control" value="9876543210" maxlength="10" required>
+          </div>
+          <div class="form-group">
+            <label for="course" class="form-label">Course / Department <span class="required">*</span></label>
+            <select id="course" name="course" class="form-control">
+              <option value="B.Tech IT" selected>B.Tech Information Technology</option>
+              <option value="B.Tech CE">B.Tech Computer Engineering</option>
+              <option value="B.Tech CSE">B.Tech Computer Science &amp; Eng.</option>
+              <option value="B.Tech EC">B.Tech Electronics &amp; Comm.</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="year" class="form-label">Year of Study <span class="required">*</span></label>
+            <select id="year" name="year" class="form-control">
+              <option value="1st Year">1st Year</option>
+              <option value="2nd Year">2nd Year</option>
+              <option value="3rd Year" selected>3rd Year</option>
+              <option value="4th Year">4th Year</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="address" class="form-label">City / Address</label>
+            <input type="text" id="address" name="address" class="form-control" value="Anand, Gujarat">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="bio" class="form-label">Short Bio &amp; Interests</label>
+          <textarea id="bio" name="bio" class="form-control" rows="3">Passionate about Web Development, UI/UX, and Cloud Computing.</textarea>
+        </div>
+
+        <!-- Wireframe 8: Save changes button -->
+        <div style="margin-top:28px; display:flex; justify-content:flex-end; gap:12px;">
+          <a href="student_dashboard.html" class="btn btn-secondary">Cancel</a>
+          <button type="submit" class="btn btn-primary btn-lg">Save Changes</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-bottom">
+      <p>&copy; 2026 CHARUSAT - Faculty of Technology and Engineering (FTE). ITUE203 Web Development Frameworks.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
